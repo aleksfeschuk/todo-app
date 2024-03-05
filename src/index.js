@@ -1,33 +1,11 @@
 import React from 'react';
 import  ReactDOM from 'react-dom';
 
-const TodoList = () => {
+import AppHeader from './components/app-header';
+import TodoList from './components/todo-list';
+import SearchPanel from './components/search-panel';
 
 
-  const items = ['Drink Coffe', 'Buil Awesome App']
-  return (
-    <ul>
-      <li>{ items[0] }</li>
-      <li>{ items[1] }</li>
-    </ul>
-  )
-};
-
-
-const AppHeader = () => {
-  return <h1>My Todo List</h1>
-};
-
-const SearchPanel = () => {
-  const searchText = 'Type here to search';
-  const searchStyle = {
-    fontSize: '25px'
-  }
-  
-  return <input 
-    style={searchStyle}
-    placeholder={searchText} />;
-};
 
 const App = () => {
   return (
@@ -41,7 +19,6 @@ const App = () => {
 
 
 
-
-
 ReactDOM.render(<App />, 
   document.getElementById('root'));
+
