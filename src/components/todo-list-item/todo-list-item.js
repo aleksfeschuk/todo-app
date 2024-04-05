@@ -14,7 +14,7 @@ export default class TodoListItem extends Component {
             return {
                 done: !done
             }
-        });
+        }); 
     };
     
     onMarkImportant = () => {
@@ -37,29 +37,31 @@ export default class TodoListItem extends Component {
         if (important) {
             classNames += ' important'
         }
+
+
         
-            return (
-                <span className={classNames}>
-                    <span  
-                        className="todo-list-item-label" 
-                        onClick = { this.onLabelClick }>
-                        { label }
-                    </span>
-                
-        
-                    <button  type="button"
-                        className="btn btn-outline-success btn-sm float-right"
-                        onClick={this.onMarkImportant}>
-                        <i className="fa fa-exclamation" />
-                    </button>
-        
-                    <button type="button"
-                        className="btn btn-outline-danger btn-sm float-right"
-                        onClick={onDeleted}>
-                        <i className="fa-regular fa-trash" />
-                    </button>
+        return (
+            <span className={classNames}>
+                <span  
+                    className="todo-list-item-label" 
+                    onClick = { this.onLabelClick }>
+                    { label }
                 </span>
-            );
+            
+    
+                <button  type="button"
+                    className="btn btn-outline-success btn-sm float-right"
+                    onClick={this.onMarkImportant}>
+                    <i className="fa fa-exclamation" />
+                </button>
+    
+                <button type="button"
+                    className="btn btn-outline-danger btn-sm float-right"
+                    onClick={onDeleted}>
+                    <i className="fa-regular fa-trash" />
+                </button>
+            </span>
+        );
         };   
 }
 
